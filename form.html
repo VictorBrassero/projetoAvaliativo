@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">>
 	<title>Formulário</title>
 	<link rel="stylesheet" type="text/css" href="_css/stilo.css"/>
+	<script src="validacoes.js"></script>
+	<title>validações</title>
 </head>
 <body>
-    <h1>Formulário</h1>
-    <a href="index.html">Página inicial</a>
+    <h1>Formulário</font></h1>
+    
+
     <form>
-    	<p>Nome</p>
-    	<input type="text" name="nome">
-    	 <p>Email</p>
-         <input type="Email" name="Email" placeholder="nome@email.com">
-         <p>Celular</p>
-         <input type="tel" name="Celular" placeholder="(XX)X XXXX-XXXX">
-         <p>CPF</p>
-         <input type="text" name="CPF">
-         <p>Assunto</p>
-         <input type="text" name="Assunto">
-         <p>Descrição</p>
-         <input type="text" name="descrição">
-         <p><button>Enviar</button></p>
+    	<p>Nome Completo</p>
+    	     <input type="text" id="nome" name="Nome" placeholder="Informe o seu nome completo">
+
+    	<p>CPF</p>
+             <input type="text" id="Cpf" name="CPF" placeholder="Informe o seu CPF">
+
+    	<p>Gênero</p>
+             <input type="text" id="Gênero" name="Genero" placeholder="Informe o seu gênero">
+
+    	<p>Nacionalidade</p>
+    	     <input type="text" id="Nacionalidade" name="Nacionalidade" placeholder="Informe sua nacionalidade">
+
+    	<p>Data de Nascimento</p>
+             <input type="tel" id="Data de Nascimento" name="Data de Nascimento" placeholder="Informe a sua data de nascimento">
+
+    	<p>E-mail</p>
+             <input type="Email" id="email" name="Email" placeholder="Informe o seu Email">
+
+        <p>Celular</p>
+             <input type="tel" id="fone" name="Celular" onblur="maskFone()" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Informe o seu número de telefone" maxlengt="11">
+
+        <p>CEP</p>     
+             <input type="CEP" id="CEP" name="CEP" placeholder="Informe o seu CEP">
+
+        <p>Endereço</p>     
+             <input type="Endereço" id="Endereço" name="Endereço">
+        
+        <p>Número</p>     
+             <input type="Número" id="Número" name="Número" placeholder="Ex:777">
+
+        <p>Bairro</p>     
+             <input type="Bairro" id="Bairro" name="Bairro">
+
+        <p>Complemento</p>     
+             <input type="Complemento" id="Complemento" name="Complemento" placeholder="Casa, Bloco, Apart...">          
+
+        
+         <p><button class="btn btn-primary" onclick="verificar()"
+         name="cadastrar">CADASTRAR</button></p>
     </form>     
 </body>
 </html>
